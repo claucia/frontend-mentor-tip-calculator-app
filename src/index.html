@@ -10,10 +10,59 @@
     <link rel="manifest" href="./site.webmanifest" />
 
     <link rel="stylesheet" href="./scss/main.scss" />
-    <title>Hello, world!</title>
+    <title>Frontend Mentor: Tip calculator app</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div>
+      <h1>Splitter</h1>
+      <div class="calculator">
+        <div class="input-group">
+          <label for="bill">Bill</label>
+          <input type="number" name="bill" id="bill" />
+        </div>
+        <div class="select-tip">
+          <span>Select Tip %</span>
+          <div class="input-group">
+            <input type="radio" id="5-percent" name="tip-amount" value="5" />
+            <label for="5-percent">5%</label>
+          </div>
+          <div class="input-group">
+            <input type="radio" id="10-percent" name="tip-amount" value="10" />
+            <label for="10-percent">10%</label>
+          </div>
+          <div class="input-group">
+            <input type="radio" id="15-percent" name="tip-amount" value="15" />
+            <label for="15-percent">15%</label>
+          </div>
+          <div class="input-group">
+            <input type="radio" id="25-percent" name="tip-amount" value="25" />
+            <label for="25-percent">25%</label>
+          </div>
+          <div class="input-group">
+            <input type="radio" id="50-percent" name="tip-amount" value="50" />
+            <label for="50-percent">50%</label>
+          </div>
+          <div class="input-group">
+            <input type="text" name="custom" id="custom" />
+          </div>
+        </div>
+        <div class="input-group">
+          <label>Number of People</label> <span>Can't be zero</span>
+          <input type="number" name="number-of-people" id="number-of-people" />
+        </div>
+      </div>
+      <div class="result">
+        <div class="tip-amount">
+          <span>Tip Amount / person</span>
+          <span class="amount"></span>
+        </div>
+        <div class="total-per-person">
+          <span>Total / person</span>
+          <span class="amount-per-person"></span>
+          <button type="reset" class="reset">Reset</button>
+        </div>
+      </div>
+    </div>
     <script type="module" src="./js/app.js"></script>
   </body>
 </html>
