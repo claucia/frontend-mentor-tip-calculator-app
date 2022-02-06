@@ -1,6 +1,6 @@
 {
-  "name": "web-app-template",
-  "description": "Web app template with Parse.js",
+  "name": "tip-calculator-app",
+  "description": "Frontend mentor: tip calculator app",
   "author": {
     "name": "Claucia Cambruzzi",
     "url": "https://claucia.com"
@@ -18,6 +18,6 @@
     "start": "parcel --open chrome",
     "prebuild": "rm -rf dist",
     "build": "parcel build",
-    "deploy": "npm run build -- --public-url /web-app-template && gh-pages -d dist"
+    "deploy": "npm run build -- --public-url /frontend-mentor-tip-calculator-app && gh-pages -d dist"
   }
 }

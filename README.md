@@ -1,23 +1,8 @@
-# Web app template
+# Frontend Mentor: Tip calculator app
 
-This is a web app template with [Parcel.js](https://parceljs.org/) suitable for most of my vanilla JavaScript projects.
+This is a Frontend Mentor project demonstrating a [tip calculator app](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX).  
 
-## Using this repository to start a new project
-
-1. In GitHub, click the `Use this template` button.
-1. Follow the instructions to create a new repository from `web-app-template-parceljs`.
-1. Clone the newly created repository.
-1. Update the following values in the `package.json` file:
-   - `name`
-   - `description`
-   - `public-url` parameter used in the `deploy` script. It should match your newly created repository name.
-1. Run `npm install` to download the dependencies. It should create the `node_modules` folder and update the `package-lock.json` file.
-1. Update the contents of the `README.md` file:
-   - Update the title.
-   - Add a brief description of the project.
-   - You can probably remove the section `Using this repository to start a new project`, as it's only meaningful for this template.
-1. Commit and push these changes.
-1. You are ready to start the development!
+It uses HTML, SCSS, vanilla JavaScript, and [Parcel.js](https://parceljs.org/) for building.
 
 ## Running the app for development
 
