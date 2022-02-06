@@ -1,0 +1,23 @@
+{
+  "name": "web-app-template",
+  "description": "Web app template with Parse.js",
+  "author": {
+    "name": "Claucia Cambruzzi",
+    "url": "https://claucia.com"
+  },
+  "private": true,
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.1.1",
+    "@parcel/transformer-sass": "^2.1.1",
+    "@parcel/transformer-webmanifest": "^2.1.1",
+    "gh-pages": "^3.2.3",
+    "parcel": "^2.1.1"
+  },
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel --open chrome",
+    "prebuild": "rm -rf dist",
+    "build": "parcel build",
+    "deploy": "npm run build -- --public-url /web-app-template && gh-pages -d dist"
+  }
+}
