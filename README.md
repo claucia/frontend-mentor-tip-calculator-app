@@ -14,7 +14,7 @@ This is a web app template with [Parcel.js](https://parceljs.org/) suitable for 
 1. Run `npm install` to download the dependencies. It should create the `node_modules` folder and update the `package-lock.json` file.
 1. Update the contents of the `README.md` file:
    - Update the title.
-   - Add a brief description of project.
+   - Add a brief description of the project.
    - You can probably remove the section `Using this repository to start a new project`, as it's only meaningful for this template.
 1. Commit and push these changes.
 1. You are ready to start the development!
