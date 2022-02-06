@@ -46,28 +46,60 @@ function handleNumberOfPeopleInputChange() {
 
 // Business logic functions
 function calculate() {
-  let billAmount = billAmountInput.value;
-  let numberOfPeople = numberOfPeopleInput.value;
+  let billAmount = getBillAmount();
+  let numberOfPeople = getNumberOfPeople();
   let tipPercentage = getSelectedTip();
 
-  console.log(billAmount, numberOfPeople, tipPercentage);
-  let tipAmountPerPerson = calculateTipAmountPerPerson(billAmount, tipPercentage, numberOfPeople);
+  console.log("Bill: " + billAmount, "Number of people: " + numberOfPeople, "Tip percentage: " + tipPercentage);
 
-  amountOutputElement.innerHTML = tipAmountPerPerson;
+  if (numberOfPeople === 0) {
+    console.log("won't do anything");
+    displayResults(0, 0);
+    return;
+  }
+
+  let tipAmountPerPerson = calculateTipAmountPerPerson(billAmount, tipPercentage, numberOfPeople);
+  let totalAmountPerPerson = calculateTotalPerPerson(billAmount, tipAmountPerPerson, numberOfPeople);
+  displayResults(tipAmountPerPerson, totalAmountPerPerson);
 }
 
 function calculateTipAmountPerPerson(billAmount, tipPercentageValue, numberOfPeople) {
   return (billAmount * tipPercentageValue) / numberOfPeople;
 }
 
-function calculateTotalPerPerson() {}
+function calculateTotalPerPerson(billAmount, tipAmountPerPerson, numberOfPeople) {
+  return billAmount / numberOfPeople + tipAmountPerPerson;
+}
+
+function displayResults(tipAmountPerPerson, totalAmountPerPerson) {
+  amountOutputElement.innerHTML = tipAmountPerPerson;
+  amountPerPersonOutputElement.innerHTML = totalAmountPerPerson;
+}
 
 function getSelectedTip() {
   let selectedRadio = document.querySelector('input[name="tip-amount"]:checked');
   if (selectedRadio != null) {
     return selectedRadio.value / 100;
-  } else {
+  } else if (customPercentInput.value) {
     return customPercentInput.value / 100;
+  } else {
+    return 0;
+  }
+}
+
+function getNumberOfPeople() {
+  if (numberOfPeopleInput.value) {
+    return numberOfPeopleInput.value;
+  } else {
+    return 0;
+  }
+}
+
+function getBillAmount() {
+  if (billAmountInput.value) {
+    return billAmountInput.value;
+  } else {
+    return 0;
   }
 }
 
