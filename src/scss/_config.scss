@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Space+Mono:wght@400;700&display=swap");
+
+// Variables
+
+// Colors
+$strong-cyan: hsl(172, 67%, 45%);
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$light-grayish-cyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+// Font
+$font-family: "Space Mono", monospace;
+
+// Input font size
+$input-font-size: 24px;
+
+// Breakpoints for media queries
+$mobile-devices: 375px;
+$desktop-devices: 1440px;
